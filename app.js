@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+const MONGO_URI = process.env.MONGO_URI
+
 const path = require('path');
 
 const express = require('express');
@@ -18,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(indexRoute);
 
-mongoose.connect('mongodb+srv://DaniZeu:NtOPCucGQN8u3Epy@cluster0.w4cjk7i.mongodb.net/blogio?retryWrites=true')   // BLUR THIS LINE
+mongoose.connect(MONGO_URI)   
 .then(result => {
     app.listen(3000);
 })
