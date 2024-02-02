@@ -1,0 +1,36 @@
+{
+  "name": "blogio",
+  "version": "1.0.0",
+  "description": "A website where you can share your stories, thoughts, ideas and much more!",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vasinc/blogio.git"
+  },
+  "keywords": [
+    "blog",
+    "share",
+    "pictures",
+    "comunity"
+  ],
+  "author": "Vasinc Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vasinc/blogio/issues"
+  },
+  "homepage": "https://github.com/Vasinc/blogio#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.1"
+  }
+}
