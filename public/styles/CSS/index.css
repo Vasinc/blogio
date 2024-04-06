@@ -8,9 +8,105 @@
 body {
   font-size: 100%;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-grid {
+  display: grid !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.active-burger {
+  z-index: 1001;
+}
+.active-burger .burger-line {
+  background: #CAD8DE !important;
+}
+.active-burger .burger-line:first-of-type {
+  transform: rotate(45deg) translateX(0.35rem);
+}
+.active-burger .burger-line:nth-of-type(2) {
+  transform: rotate(-45deg) translateX(0.3rem);
+}
+.active-burger .burger-line:last-of-type {
+  display: none;
+}
+
+.translateX-0 {
+  transform: translateX(0) !important;
 }
 
 body {
-  background: #000;
-  color: #fff;
+  background: #0f1108;
+  color: #CAD8DE;
+}
+
+#backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+main {
+  padding: 1rem;
+}
+main #months-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main #months-section .select-month-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+main #months-section .select-month-header label {
+  flex-grow: 0;
+}
+main #months-section .select-month-header #selected-month {
+  flex-grow: 0;
+}
+main #months-section #weeks-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  height: 60vh;
+  padding: 1rem;
+  overflow-x: scroll;
+}
+main #months-section #weeks-section .week {
+  display: flex;
+  gap: 1rem;
+  height: 25%;
+}
+main #months-section #weeks-section .week .day {
+  height: 100%;
+  background: #D9D9D9;
+  padding: 0.25rem 0.5rem;
+  aspect-ratio: 1/1;
+}
+main #months-section #weeks-section .week .day .day-count {
+  color: #0f1108;
+  font-weight: 700;
+  font-size: 1rem;
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,50 @@
+<nav>
+    <div id="user-UI">
+        <div class="user-UI__upper-section">
+            <img src="/images/user.png" alt="user image" class="user-image">
+            <h1 id="user-name">Not logged in</h1>
+            <div id="burger-menu">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+            </div>
+            <ul id="authentication-links">
+                <% if (pageTitle != "Calendio") { %>
+                    <li class="autehntication-link">
+                        <a href="/">Home</a>
+                    </li>
+                <% } %>
+                <li class="authentication-link">
+                    <% if( pageTitle == "Login" ) { %>
+                        <p class="active-link">Login</p>
+                    <% } else { %>
+                        <a href="/login">Login</a>
+                    <% } %>
+                </li>
+                </li>
+                <li class="authentication-link">
+                    <% if( pageTitle == "Sign-up" ) { %>
+                        <p class="active-link">Sign-up</p>
+                    <% } else { %>
+                        <a href="/sign-up">Sign-up</a>
+                    <% } %>
+                </li>
+            </ul>
+        </div>
+        <div class="user-UI__lower-section">
+
+            <div class="current-level">
+                1
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+                <div class="progress-text"> <span class="current-xp-text">75</span> / <span class="max-xp-text">100</span></div>
+            </div>
+
+            <div class="next-level">
+                2
+            </div>
+        </div>
+    </div>
+</nav>

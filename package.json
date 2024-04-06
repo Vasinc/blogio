@@ -1,27 +1,27 @@
 {
-  "name": "blogio",
+  "name": "calendio",
   "version": "1.0.0",
-  "description": "A website where you can share your stories, thoughts, ideas and much more!",
+  "description": "A website where you can be competitive with your mates, share your tasks and push each other!",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vasinc/blogio.git"
+    "url": "git+https://github.com/Vasinc/calendio.git"
   },
   "keywords": [
-    "blog",
-    "share",
-    "pictures",
+    "motivation",
+    "competitive",
+    "calendar",
     "comunity"
   ],
   "author": "Vasinc Daniel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vasinc/blogio/issues"
+    "url": "https://github.com/Vasinc/calendio/issues"
   },
-  "homepage": "https://github.com/Vasinc/blogio#readme",
+  "homepage": "https://github.com/Vasinc/calendio#readme",
   "devDependencies": {
     "nodemon": "^3.0.3"
   },

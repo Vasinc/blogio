@@ -9,7 +9,8 @@ const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
 
-const indexRoute = require('./routes/indexRoute');
+const indexRoute = require('./routes/index');
+const authRoute = require('./routes/auth')
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(indexRoute);
+app.use(authRoute)
 
 mongoose.connect(MONGO_URI)   
 .then(result => {

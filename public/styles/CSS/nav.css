@@ -1,0 +1,239 @@
+.display-block {
+  display: block !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-grid {
+  display: grid !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.active-burger {
+  z-index: 1001;
+}
+.active-burger .burger-line {
+  background: #CAD8DE !important;
+}
+.active-burger .burger-line:first-of-type {
+  transform: rotate(45deg) translateX(0.35rem);
+}
+.active-burger .burger-line:nth-of-type(2) {
+  transform: rotate(-45deg) translateX(0.3rem);
+}
+.active-burger .burger-line:last-of-type {
+  display: none;
+}
+
+.translateX-0 {
+  transform: translateX(0) !important;
+}
+
+#backdrop {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+nav #user-UI {
+  width: 100%;
+}
+nav #user-UI .user-UI__upper-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background: #CAD8DE;
+  color: #0f1108;
+}
+nav #user-UI .user-UI__upper-section #burger-menu {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  gap: 0.3rem;
+  max-width: 2rem;
+  max-height: 2rem;
+  cursor: pointer;
+}
+nav #user-UI .user-UI__upper-section #burger-menu .burger-line {
+  width: 100%;
+  height: 0.2rem;
+  background: #0f1108;
+  transition: all 300ms linear;
+}
+nav #user-UI .user-UI__upper-section #authentication-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 5rem 3rem;
+  height: 100vh;
+  width: 70%;
+  background: rgba(15, 17, 8, 0.99);
+  transform: translateX(100%);
+  z-index: 999;
+  transition: transform 300ms linear;
+}
+nav #user-UI .user-UI__upper-section #authentication-links li a {
+  color: white;
+  text-decoration: none;
+}
+nav #user-UI .user-UI__upper-section #authentication-links li a:hover {
+  text-decoration: underline;
+}
+nav #user-UI .user-UI__upper-section #authentication-links li .active-link {
+  color: gray;
+  text-decoration: underline;
+}
+nav #user-UI .user-UI__upper-section .user-image {
+  flex: 1;
+  aspect-ratio: 1/1;
+  max-height: 3rem;
+  max-width: 4rem;
+}
+nav #user-UI .user-UI__upper-section #user-name {
+  flex: 4;
+  white-space: nowrap;
+  font-size: 1.25rem;
+  margin: 0 0.5rem;
+}
+nav #user-UI .user-UI__lower-section {
+  display: flex;
+  color: white;
+  height: 2.5rem;
+}
+nav #user-UI .user-UI__lower-section .current-level {
+  padding: 0.5rem 1rem;
+  background: #6a0c0c;
+  border-bottom-left-radius: 1rem;
+  font-weight: 700;
+}
+nav #user-UI .user-UI__lower-section .progress-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #8a8a8a;
+}
+nav #user-UI .user-UI__lower-section .progress-bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  background: #00F6ED;
+}
+nav #user-UI .user-UI__lower-section .progress-bar .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0f1108;
+  font-weight: 700;
+  z-index: 3;
+}
+nav #user-UI .user-UI__lower-section .next-level {
+  padding: 0.5rem 1rem;
+  background: #6a0c0c;
+  border-bottom-right-radius: 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  nav #user-UI .user-UI__upper-section #burger-menu {
+    display: none;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin-right: 2rem;
+    height: 100%;
+    width: auto;
+    background: none;
+    transform: translateX(0);
+    z-index: 9;
+    transition: transform 300ms linear;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links li a {
+    color: #0f1108;
+    text-decoration: none;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links li a:hover {
+    text-decoration: underline;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links li .active-link {
+    color: gray;
+    text-decoration: underline;
+    cursor: default;
+  }
+}
+@media (min-width: 800px) {
+  nav #user-UI .user-UI__upper-section {
+    padding: 0.5rem 2.5rem;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links {
+    gap: 2.5rem;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links li {
+    font-size: 1.25rem;
+  }
+  nav #user-UI .user-UI__upper-section .user-image {
+    max-width: 6rem;
+    max-height: 4.25rem;
+  }
+  nav #user-UI .user-UI__upper-section #user-name {
+    font-size: 1.5rem;
+  }
+  nav #user-UI .user-UI__lower-section {
+    height: 3rem;
+  }
+  nav #user-UI .user-UI__lower-section .current-level {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.25rem;
+  }
+  nav #user-UI .user-UI__lower-section .progress-bar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #8a8a8a;
+  }
+  nav #user-UI .user-UI__lower-section .progress-bar .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75%;
+    background: #00F6ED;
+  }
+  nav #user-UI .user-UI__lower-section .progress-bar .progress-text {
+    font-size: 1.25rem;
+  }
+  nav #user-UI .user-UI__lower-section .next-level {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=nav.css.map */

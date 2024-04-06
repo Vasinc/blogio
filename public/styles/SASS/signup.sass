@@ -1,0 +1,61 @@
+// imports
+@import "partials/reset"
+@import "partials/classes"
+@import "partials/variables"
+
+// actual styling
+body
+    display: flex
+    flex-direction: column
+    height: 100vh
+    background: $black
+    color: $white
+
+main
+    flex: 1
+    display: grid
+    place-items: center
+    #signup-form
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+        background: lighten($black, 55%)
+        padding: 3rem 2rem
+        border-radius: 1rem
+        h1
+            text-align: center
+            color: $black
+            margin-bottom: 2rem
+        .input-container
+            position: relative
+            input
+                padding: .75rem 1.5rem
+                font-size: 1rem
+                background: none
+                color: black
+                font-weight: 700
+                border: 3px solid  $black
+                border-radius: .5rem
+                &::placeholder
+                    color: black
+                    font-weight: 700
+                &:focus
+                    outline-color: $black
+            i
+                position: absolute
+                left: 1rem
+                top: 50%
+                transform: translate(-50%, -50%)
+                color: $black
+        button
+            padding: .75rem 1.5rem
+            background: darken($orange, 10%) 
+            color: white
+            border: none
+            border-radius: 1.5rem
+            cursor: pointer
+        p  
+            text-align: center
+            color: $black
+            a
+                color: #0044cc

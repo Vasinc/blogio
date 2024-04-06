@@ -1,0 +1,187 @@
+// imports
+@import "partials/classes"
+@import "partials/variables"
+    
+// actual styling
+#backdrop
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .4)
+    z-index: 99
+
+nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 1rem
+    #user-UI
+        width: 100%
+        .user-UI__upper-section
+            position: relative
+            display: flex
+            align-items: center
+            padding: .5rem 
+            background: $white
+            color: $black
+            #burger-menu
+                display: flex
+                flex-direction: column
+                flex: 2
+                gap: .3rem
+                max-width: 2rem
+                max-height: 2rem
+                cursor: pointer
+                .burger-line
+                    width: 100%
+                    height: .2rem
+                    background: $black
+                    transition: all 300ms linear
+
+            #authentication-links
+                    position: absolute
+                    top: 0
+                    right: 0
+                    display: none
+                    flex-direction: column
+                    align-items: flex-start
+                    gap: 1.5rem
+                    list-style: none
+                    padding: 5rem 3rem
+                    height: 100vh
+                    width: 70%
+                    background: rgba(15, 17, 8, .99)
+                    transform: translateX(100%)
+                    z-index: 999
+                    transition: transform 300ms linear
+                    li
+                        a
+                            color: white
+                            text-decoration: none
+                            &:hover
+                                text-decoration: underline
+                        .active-link
+                            color: darken(white, 50%)
+                            text-decoration: underline
+            .user-image
+                flex: 1
+                aspect-ratio: 1 / 1
+                max-height: 3rem
+                max-width: 4rem
+            #user-name
+                flex: 4
+                white-space: nowrap
+                font-size: 1.25rem
+                margin: 0 .5rem
+        .user-UI__lower-section
+            display: flex
+            color: white
+            height: 2.5rem
+            .current-level
+                padding: .5rem 1rem
+                background: lighten($dark-red, 10%)
+                border-bottom-left-radius: 1rem
+                font-weight: 700
+            .progress-bar
+                position: relative
+                width: 100%
+                height: 100%
+                background: lighten($gray, 20%)
+                .progress
+                    position: absolute
+                    top: 0
+                    left: 0
+                    height: 100%
+                    width: 75%
+                    background: $cyan
+                .progress-text
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    color: $black
+                    font-weight: 700
+                    z-index: 3
+            .next-level
+                padding: .5rem 1rem
+                background: lighten($dark-red, 10%)
+                border-bottom-right-radius: 1rem
+                font-weight: 700
+                
+@media ( min-width: 600px )
+    nav
+        #user-UI
+            .user-UI__upper-section
+                #burger-menu
+                    display: none
+                #authentication-links
+                    position: relative
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    gap: 1.5rem
+                    list-style: none
+                    padding: 0
+                    margin-right: 2rem
+                    height: 100%
+                    width: auto
+                    background: none
+                    transform: translateX(0)
+                    z-index: 9
+                    transition: transform 300ms linear
+                    li
+                        a
+                            color: $black
+                            text-decoration: none
+                            &:hover
+                                text-decoration: underline
+                        .active-link
+                            color: darken(white, 50%)
+                            text-decoration: underline
+                            cursor: default
+                .user-image
+
+                #user-name
+                    
+
+@media ( min-width: 800px )
+    nav
+        #user-UI
+            .user-UI__upper-section
+                padding: .5rem 2.5rem
+                #authentication-links
+                    gap: 2.5rem
+                    li
+                        font-size: 1.25rem
+                        a
+                            
+                .user-image
+                   max-width: 6rem
+                   max-height: 4.25rem
+                #user-name
+                    font-size: 1.5rem
+            .user-UI__lower-section
+                height: 3rem
+                .current-level
+                    padding: .5rem 1.25rem
+                    font-size: 1.25rem
+                .progress-bar
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    background: lighten($gray, 20%)
+                    .progress
+                        position: absolute
+                        top: 0
+                        left: 0
+                        height: 100%
+                        width: 75%
+                        background: $cyan
+                    .progress-text
+                        font-size: 1.25rem
+                .next-level
+                    padding: .5rem 1.25rem
+                    font-size: 1.25rem

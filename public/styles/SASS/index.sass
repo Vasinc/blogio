@@ -1,9 +1,58 @@
 // imports
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap')
-@import "reset"
-@import "variables"
+@import "partials/reset"
+@import "partials/classes"
+@import "partials/variables"
 
 // actual styling
 body
     background: $black
     color: $white
+
+#backdrop
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .4)
+    z-index: 99
+
+main
+    padding: 1rem
+    #months-section
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        .select-month-header
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: .5rem
+            padding: 1rem
+            label
+                flex-grow: 0
+            #selected-month
+                flex-grow: 0
+        #weeks-section
+            display: flex
+            flex-direction: column
+            gap: 1rem
+            width: 90%
+            height: 60vh
+            padding: 1rem
+            overflow-x: scroll
+            .week
+                display: flex
+                gap: 1rem
+                height: 25%
+                .day    
+                    height: 100%
+                    background: #D9D9D9
+                    padding: .25rem .5rem
+                    aspect-ratio: 1 / 1
+                    .day-count
+                        color: $black
+                        font-weight: 700
+                        font-size: 1rem

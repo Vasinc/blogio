@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-grid {
+  display: grid !important;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.active-burger {
+  z-index: 1001;
+}
+.active-burger .burger-line {
+  background: #CAD8DE !important;
+}
+.active-burger .burger-line:first-of-type {
+  transform: rotate(45deg) translateX(0.35rem);
+}
+.active-burger .burger-line:nth-of-type(2) {
+  transform: rotate(-45deg) translateX(0.3rem);
+}
+.active-burger .burger-line:last-of-type {
+  display: none;
+}
+
+.translateX-0 {
+  transform: translateX(0) !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #0f1108;
+  color: #CAD8DE;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+main #signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #adbe74;
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+}
+main #signup-form h1 {
+  text-align: center;
+  color: #0f1108;
+  margin-bottom: 2rem;
+}
+main #signup-form .input-container {
+  position: relative;
+}
+main #signup-form .input-container input {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: none;
+  color: black;
+  font-weight: 700;
+  border: 3px solid #0f1108;
+  border-radius: 0.5rem;
+}
+main #signup-form .input-container input::-moz-placeholder {
+  color: black;
+  font-weight: 700;
+}
+main #signup-form .input-container input::placeholder {
+  color: black;
+  font-weight: 700;
+}
+main #signup-form .input-container input:focus {
+  outline-color: #0f1108;
+}
+main #signup-form .input-container i {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0f1108;
+}
+main #signup-form button {
+  padding: 0.75rem 1.5rem;
+  background: #eb4300;
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+main #signup-form p {
+  text-align: center;
+  color: #0f1108;
+}
+main #signup-form p a {
+  color: #0044cc;
+}/*# sourceMappingURL=signup.css.map */

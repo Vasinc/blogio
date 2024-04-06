@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= pageTitle %></title>
+        <link rel="stylesheet" href="/styles/CSS/nav.css">
+        <link rel="stylesheet" href="/styles/CSS/signup.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="/scripts/main.js" defer></script>
+    </head>
+    <body>
+        <div id="backdrop"></div>
+        <header>
+            <%- include('../includes/nav.ejs') %>
+        </header>
+        <main>
+            <form action="/login" method="post" id="signup-form">
+                <h1>Sign-up</h1>
+                <div class="input-container">
+                    <input type="text" name="username" id="username_text" placeholder="Username">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-container">
+                    <input type="text" name="email" id="email_text" placeholder="Email">
+                    <i class='bx bxs-envelope' ></i>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" id="password_text" placeholder="Password">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="confirm-password" id="confirm-password_text" placeholder="Confirm password">
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <button type="submit">Register</button>
+                <p>
+                    Already have an account? <a href="/login">Log in</a>
+                </p>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
+</html>
