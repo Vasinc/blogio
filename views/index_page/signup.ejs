@@ -15,25 +15,37 @@
             <%- include('../includes/nav.ejs') %>
         </header>
         <main>
-            <form action="/login" method="post" id="signup-form">
+            <form action="/sign-up" method="post" id="signup-form">
+                <% if (errorMessage) { %>
+                    <div class="user-message user-messsage--error"><%= errorMessage %></div>
+                <% } %>
                 <h1>Sign-up</h1>
                 <div class="input-container">
-                    <input type="text" name="username" id="username_text" placeholder="Username">
+                    <input 
+                    class="<%= validationErrors.find(e => e.path === 'username') ? 'invalid' : '' %>"
+                    type="text" name="username" id="username_text" placeholder="Username" value="<%= oldInput.username %>">
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-container">
-                    <input type="text" name="email" id="email_text" placeholder="Email">
+                    <input 
+                    class="<%= validationErrors.find(e => e.path === 'email') ? 'invalid' : '' %>"
+                    type="text" name="email" id="email_text" placeholder="Email" value="<%= oldInput.email %>">
                     <i class='bx bxs-envelope' ></i>
                 </div>
                 <div class="input-container">
-                    <input type="password" name="password" id="password_text" placeholder="Password">
+                    <input 
+                    class="<%= validationErrors.find(e => e.path === 'password') ? 'invalid' : '' %>"
+                    type="password" name="password" id="password_text" placeholder="Password" value="<%= oldInput.password %>">
                     <i class='bx bxs-lock-alt' ></i>
                 </div>
                 <div class="input-container">
-                    <input type="password" name="confirm-password" id="confirm-password_text" placeholder="Confirm password">
+                    <input 
+                    class="<%= validationErrors.find(e => e.path === 'confirmPassword') ? 'invalid' : '' %>"
+                    type="password" name="confirmPassword" id="confirm-password_text" placeholder="Confirm password" value="<%= oldInput.confirmPassword %>">
                     <i class='bx bxs-lock-alt' ></i>
                 </div>
-                <button type="submit">Register</button>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <button type="submit">Sign-up</button>
                 <p>
                     Already have an account? <a href="/login">Log in</a>
                 </p>

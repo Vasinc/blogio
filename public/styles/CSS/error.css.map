@@ -1,0 +1,1 @@
+{"version":3,"sources":["../SASS/error.sass","../SASS/partials/_reset.sass","error.css","../SASS/partials/_variables.sass"],"names":[],"mappings":"AACQ,6FAAA;ACDR;EACI,SAAA;EACA,UAAA;EACA,mBAAA;ACEJ;;ADAA;EACI,eAAA;EACA,kCAAA;EACA,sBAAA;EACA,kBAAA;ACGJ;;AFNA;EACI,mBGNI;EHOJ,cGRI;ADiBR","file":"error.css"}

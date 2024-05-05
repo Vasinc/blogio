@@ -105,6 +105,12 @@ nav #user-UI .user-UI__upper-section #authentication-links li .active-link {
   color: gray;
   text-decoration: underline;
 }
+nav #user-UI .user-UI__upper-section #authentication-links li button {
+  border: none;
+  color: white;
+  background: none;
+  cursor: pointer;
+}
 nav #user-UI .user-UI__upper-section .user-image {
   flex: 1;
   aspect-ratio: 1/1;
@@ -190,6 +196,9 @@ nav #user-UI .user-UI__lower-section .next-level {
     text-decoration: underline;
     cursor: default;
   }
+  nav #user-UI .user-UI__upper-section #authentication-links li button {
+    color: #0f1108;
+  }
 }
 @media (min-width: 800px) {
   nav #user-UI .user-UI__upper-section {
@@ -199,6 +208,9 @@ nav #user-UI .user-UI__lower-section .next-level {
     gap: 2.5rem;
   }
   nav #user-UI .user-UI__upper-section #authentication-links li {
+    font-size: 1.25rem;
+  }
+  nav #user-UI .user-UI__upper-section #authentication-links li button {
     font-size: 1.25rem;
   }
   nav #user-UI .user-UI__upper-section .user-image {
@@ -226,7 +238,7 @@ nav #user-UI .user-UI__lower-section .next-level {
     top: 0;
     left: 0;
     height: 100%;
-    width: 75%;
+    width: 0%;
     background: #00F6ED;
   }
   nav #user-UI .user-UI__lower-section .progress-bar .progress-text {

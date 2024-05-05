@@ -66,6 +66,11 @@ nav
                         .active-link
                             color: darken(white, 50%)
                             text-decoration: underline
+                        button
+                            border: none
+                            color: white
+                            background: none
+                            cursor: pointer
             .user-image
                 flex: 1
                 aspect-ratio: 1 / 1
@@ -142,9 +147,8 @@ nav
                             color: darken(white, 50%)
                             text-decoration: underline
                             cursor: default
-                .user-image
-
-                #user-name
+                        button
+                            color: $black
                     
 
 @media ( min-width: 800px )
@@ -156,7 +160,8 @@ nav
                     gap: 2.5rem
                     li
                         font-size: 1.25rem
-                        a
+                        button
+                            font-size: 1.25rem
                             
                 .user-image
                    max-width: 6rem
@@ -178,7 +183,7 @@ nav
                         top: 0
                         left: 0
                         height: 100%
-                        width: 75%
+                        width: 0%
                         background: $cyan
                     .progress-text
                         font-size: 1.25rem

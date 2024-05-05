@@ -18,16 +18,26 @@ main
     #signup-form
         display: flex
         flex-direction: column
+        align-items: center
         gap: 1.5rem
         background: lighten($black, 55%)
         padding: 3rem 2rem
         border-radius: 1rem
+        .user-message
+            text-align: center
+            margin: auto
+            max-width: 25ch
+            color: $orange
+            background: $black
+            padding: .5rem
+            border-radius: 1rem
         h1
             text-align: center
             color: $black
             margin-bottom: 2rem
         .input-container
             position: relative
+            // margin: auto
             input
                 padding: .75rem 1.5rem
                 font-size: 1rem
@@ -48,6 +58,7 @@ main
                 transform: translate(-50%, -50%)
                 color: $black
         button
+            width: 100%
             padding: .75rem 1.5rem
             background: darken($orange, 10%) 
             color: white
@@ -59,3 +70,5 @@ main
             color: $black
             a
                 color: #0044cc
+        .invalid
+            border: 3px solid red !important

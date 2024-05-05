@@ -68,6 +68,13 @@ main #login-form {
   padding: 3rem 2rem;
   border-radius: 1rem;
 }
+main #login-form .user-message {
+  text-align: center;
+  color: #ff5f1f;
+  background: #0f1108;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+}
 main #login-form h1 {
   text-align: center;
   color: #0f1108;

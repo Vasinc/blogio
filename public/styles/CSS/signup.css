@@ -63,9 +63,19 @@ main {
 main #signup-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
   background: #adbe74;
   padding: 3rem 2rem;
+  border-radius: 1rem;
+}
+main #signup-form .user-message {
+  text-align: center;
+  margin: auto;
+  max-width: 25ch;
+  color: #ff5f1f;
+  background: #0f1108;
+  padding: 0.5rem;
   border-radius: 1rem;
 }
 main #signup-form h1 {
@@ -104,6 +114,7 @@ main #signup-form .input-container i {
   color: #0f1108;
 }
 main #signup-form button {
+  width: 100%;
   padding: 0.75rem 1.5rem;
   background: #eb4300;
   color: white;
@@ -117,4 +128,7 @@ main #signup-form p {
 }
 main #signup-form p a {
   color: #0044cc;
+}
+main #signup-form .invalid {
+  border: 3px solid red !important;
 }/*# sourceMappingURL=signup.css.map */

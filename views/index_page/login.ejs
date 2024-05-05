@@ -15,16 +15,20 @@
             <%- include('../includes/nav.ejs') %>
         </header>
         <main>
-            <form action="/" method="post" id="login-form">
+            <form action="/login" method="post" id="login-form">
+                <% if (errorMessage) { %>
+                    <div class="user-message user-messsage--error"><%= errorMessage %></div>
+                <% } %>
                 <h1>Login</h1>
                 <div class="input-container">
-                    <input type="text" name="username" id="username_text" placeholder="Username">
+                    <input type="text" name="username" id="username_text" placeholder="Username" value="<%= oldInput.username %>">
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-container">
-                    <input type="password" name="password" id="password_text" placeholder="Password">
+                    <input type="password" name="password" id="password_text" placeholder="Password" value="<%= oldInput.password %>">
                     <i class='bx bxs-lock-alt' ></i>
                 </div>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <button type="submit">Login</button>
                 <p>
                     Don't have an account? <a href="/sign-up">Sign up</a>
